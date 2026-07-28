@@ -61,6 +61,31 @@
           <h2>Plataformas institucionales</h2>
           <p>Haz clic en una tarjeta para ir directo al sistema correspondiente.</p>
         </div>
+        <section id="profesores" class="faculty-section">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Directorio de Profesores</h2>
+      <p>Cuerpo académico de la Escuela de Ingeniería UCN, sede Coquimbo.</p>
+    </div>
+
+    <div class="faculty-controls">
+      <label for="faculty-search" class="visually-hidden">Buscar profesor</label>
+      <input id="faculty-search" type="text" placeholder="Buscar por nombre, área o correo…" autocomplete="off" />
+
+      <div class="faculty-filters" id="faculty-filters" role="group" aria-label="Filtrar por carrera">
+        <!-- Los chips de filtro se generan dinámicamente desde profesores.js -->
+      </div>
+    </div>
+
+    <div id="faculty-grid" class="faculty-grid" role="list"></div>
+    <p id="faculty-no-results" class="no-results" hidden>No se encontraron profesores con ese criterio.</p>
+
+    <p class="faculty-disclaimer">
+      Datos obtenidos de <a href="https://eic.ucn.cl/personas" target="_blank" rel="noopener noreferrer">eic.ucn.cl/personas</a>.
+      Si detectas un dato desactualizado, avísanos por el correo institucional del portal.
+    </p>
+  </div>
+</section>
 
         <div id="platform-grid" class="platform-grid" role="list">
           <!-- Las tarjetas se generan dinámicamente desde platforms.js -->
