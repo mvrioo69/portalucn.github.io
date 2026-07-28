@@ -410,3 +410,118 @@ body {
   display: block;
   object-fit: contain;
 }
+/* ===== Directorio de Profesores ===== */
+.faculty-section {
+  padding: 3rem 0;
+}
+
+.faculty-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+#faculty-search {
+  width: 100%;
+  padding: 0.65rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 1rem;
+}
+
+.faculty-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-chip {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: transparent;
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.filter-chip.is-active {
+  background-color: currentColor;
+  color: #fff;
+  background-color: #2b4c7e; /* ajusta al color primario de tu marca UCN */
+  border-color: #2b4c7e;
+}
+
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.faculty-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.faculty-avatar {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #2b4c7e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.faculty-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.faculty-name {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.faculty-role {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.faculty-area {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.faculty-tag {
+  align-self: flex-start;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(43, 76, 126, 0.1);
+  color: #2b4c7e;
+  margin-top: 0.25rem;
+}
+
+.faculty-email {
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.faculty-disclaimer {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.5);
+}
