@@ -5,6 +5,8 @@ Este repositorio reúne información y descripciones de los distintos sitios ins
 Contenido
 Listado de páginas oficiales y servicios digitales.
 
+Listado de profesores y contacto de la escuela de ingeniería.
+
 Descripción funcional y propósito de cada sitio
 
 Alcance
