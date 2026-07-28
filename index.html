@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UCN | Portal de Plataformas</title>
+  <meta name="description" content="Portal centralizado de acceso a las plataformas de la Universidad Católica del Norte." />
+
+  <!-- Seguridad: Content Security Policy estricta. No se permiten scripts/estilos inline ni recursos externos. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/favicon.svg" alt="" />
+        </span>
+        <span class="brand-text">
+          <strong>UCN</strong>
+          <small>Universidad Católica del Norte</small>
+        </span>
+      </div>
+
+      <nav class="top-nav" aria-label="Navegación principal">
+        <a href="#plataformas">Plataformas</a>
+        <a href="#ayuda">Ayuda</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro">
+        <span aria-hidden="true">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Todas tus plataformas UCN, <span>en un solo lugar</span></h1>
+        <p>Accede de forma rápida y segura al Campus Virtual, correo institucional, biblioteca y más.</p>
+
+        <div class="search-wrap" role="search">
+          <label for="search" class="visually-hidden">Buscar plataforma</label>
+          <input id="search" type="text" placeholder="Buscar una plataforma… (ej. correo, biblioteca)" autocomplete="off" />
+        </div>
+      </div>
+    </section>
+
+    <section id="plataformas" class="platforms-section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Plataformas institucionales</h2>
+          <p>Haz clic en una tarjeta para ir directo al sistema correspondiente.</p>
+        </div>
+
+        <div id="platform-grid" class="platform-grid" role="list">
+          <!-- Las tarjetas se generan dinámicamente desde platforms.js -->
+        </div>
+
+        <p id="no-results" class="no-results" hidden>No se encontraron plataformas con ese término.</p>
+      </div>
+    </section>
+
+    <section id="ayuda" class="help-section">
+      <div class="container help-inner">
+        <div class="help-card">
+          <h3>¿No encuentras tu acceso?</h3>
+          <p>Revisa la sección de ayuda de la DTI o contacta a soporte de mesa de ayuda para recuperar tus credenciales institucionales.</p>
+        </div>
+        <div class="help-card">
+          <h3>Consejo de seguridad</h3>
+          <p>Nunca ingreses tus credenciales UCN en sitios distintos a los dominios oficiales de la universidad. Verifica siempre la URL antes de iniciar sesión.</p>
+        </div>
+        <div class="help-card" >
+          <h3>¿Tienes sugerencias?</h3>
+          <p>Si quieres que agreguemos más plataformas o tienes ideas para mejorar este portal, contáctanos a través del correo institucional a mario.otarola@alumnos.ucn.cl</p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto" class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Universidad Católica del Norte. Portal no oficial de accesos rápidos.</p>
+      <p class="footer-links">
+        <a href="https://www.ucn.cl" target="_blank" rel="noopener noreferrer">Sitio oficial UCN</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="platforms.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
