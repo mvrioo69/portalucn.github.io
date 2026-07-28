@@ -1,136 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UCN | Portal de Plataformas</title>
-  <meta name="description" content="Portal centralizado de acceso a las plataformas de la Universidad Católica del Norte." />
-
-  <!-- Seguridad: Content Security Policy estricta. No se permiten scripts/estilos inline ni recursos externos. -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-a[...]"
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>UCN | Portal de Plataformas</title>
+<meta name="description" content="Portal centralizado de acceso a las plataformas de la Universidad Católica del Norte." />
+<!-- Seguridad: Content Security Policy estricta. No se permiten scripts/estilos inline ni recursos externos. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <a class="skip-link" href="#main">Saltar al contenido principal</a>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <span class="brand-mark" aria-hidden="true">
-          <img src="assets/favicon.svg" alt="" />
-        </span>
-        <span class="brand-text">
-          <strong>UCN</strong>
-          <small>Universidad Católica del Norte</small>
-        </span>
-      </div>
-
-      <nav class="top-nav" aria-label="Navegación principal">
+<a class="skip-link" href="#main">Saltar al contenido principal</a>
+<header class="site-header">
+<div class="container header-inner">
+<div class="brand">
+<span class="brand-mark" aria-hidden="true">
+<img src="assets/favicon.svg" alt="" />
+</span>
+<span class="brand-text">
+<strong>UCN</strong>
+<small>Universidad Católica del Norte</small>
+</span>
+</div>
+<nav class="top-nav" aria-label="Navegación principal">
 <a href="#plataformas">Plataformas</a>
 <a href="#profesores">Profesores</a>
 <a href="#ayuda">Ayuda</a>
 <a href="#contacto">Contacto</a>
 </nav>
-
-      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro">
-        <span aria-hidden="true">🌙</span>
-      </button>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero">
-      <div class="container hero-inner">
-        <h1>Todas tus plataformas UCN, <span>en un solo lugar</span></h1>
-        <p>Accede de forma rápida y segura al Campus Virtual, correo institucional, biblioteca y más.</p>
-
-        <div class="search-wrap" role="search">
-          <label for="search" class="visually-hidden">Buscar plataforma</label>
-          <input id="search" type="text" placeholder="Buscar una plataforma… (ej. correo, biblioteca)" autocomplete="off" />
-        </div>
-      </div>
-    </section>
-
-    <section id="plataformas" class="platforms-section">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Plataformas institucionales</h2>
-          <p>Haz clic en una tarjeta para ir directo al sistema correspondiente.</p>
-        </div>
-        <section id="profesores" class="faculty-section">
-  <div class="container">
-    <div class="section-heading">
-      <h2>Directorio de Profesores</h2>
-      <p>Cuerpo académico de la Escuela de Ingeniería UCN, sede Coquimbo.</p>
-    </div>
-
-    <div class="faculty-controls">
-      <label for="faculty-search" class="visually-hidden">Buscar profesor</label>
-      <input id="faculty-search" type="text" placeholder="Buscar por nombre, área o correo…" autocomplete="off" />
-
-      <div class="faculty-filters" id="faculty-filters" role="group" aria-label="Filtrar por carrera">
-        <!-- Los chips de filtro se generan dinámicamente desde profesores.js -->
-      </div>
-    </div>
-
-    <div id="faculty-grid" class="faculty-grid" role="list"></div>
-    <p id="faculty-no-results" class="no-results" hidden>No se encontraron profesores con ese criterio.</p>
-
-    <p class="faculty-disclaimer">
-      Datos obtenidos de <a href="https://eic.ucn.cl/personas" target="_blank" rel="noopener noreferrer">eic.ucn.cl/personas</a>.
-      Si detectas un dato desactualizado, avísanos por el correo institucional del portal.
-    </p>
-  </div>
+<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro">
+<span aria-hidden="true">🌙</span>
+</button>
+</div>
+</header>
+<main id="main">
+<section class="hero">
+<div class="container hero-inner">
+<h1>Todas tus plataformas UCN, <span>en un solo lugar</span></h1>
+<p>Accede de forma rápida y segura al Campus Virtual, correo institucional, biblioteca y más.</p>
+<div class="search-wrap" role="search">
+<label for="search" class="visually-hidden">Buscar plataforma</label>
+<input id="search" type="text" placeholder="Buscar una plataforma… (ej. correo, biblioteca)" autocomplete="off" />
+</div>
+</div>
 </section>
 
-        <div id="platform-grid" class="platform-grid" role="list">
-          <!-- Las tarjetas se generan dinámicamente desde platforms.js -->
-        </div>
+<section id="plataformas" class="platforms-section">
+<div class="container">
+<div class="section-heading">
+<h2>Plataformas institucionales</h2>
+<p>Haz clic en una tarjeta para ir directo al sistema correspondiente.</p>
+</div>
+<div id="platform-grid" class="platform-grid" role="list">
+<!-- Las tarjetas se generan dinámicamente desde platforms.js -->
+</div>
+<p id="no-results" class="no-results" hidden>No se encontraron plataformas con ese término.</p>
+</div>
+</section>
 
-        <p id="no-results" class="no-results" hidden>No se encontraron plataformas con ese término.</p>
-      </div>
-    </section>
+<section id="profesores" class="faculty-section">
+<div class="container">
+<div class="section-heading">
+<h2>Directorio de Profesores</h2>
+<p>Cuerpo académico de la Escuela de Ingeniería UCN, sede Coquimbo.</p>
+</div>
 
-    <section id="ayuda" class="help-section">
-      <div class="container help-inner">
-        <div class="help-card">
-          <h3>¿No encuentras tu acceso?</h3>
-          <p>Revisa la sección de ayuda de la DTI o contacta a soporte de mesa de ayuda para recuperar tus credenciales institucionales.</p>
-        </div>
-        <div class="help-card">
-          <h3>Consejo de seguridad</h3>
-          <p>Nunca ingreses tus credenciales UCN en sitios distintos a los dominios oficiales de la universidad. Verifica siempre la URL antes de iniciar sesión.</p>
-        </div>
-        <div class="help-card" >
-          <h3>¿Tienes sugerencias?</h3>
-          <p>Si quieres que agreguemos más plataformas o tienes ideas para mejorar este portal, contáctanos a través del correo institucional de mario.otarola@alumnos.ucn.cl o renato.nunez02@alumnos.ucn.cl
-      </div>
-    </section>
-  </main>
+<div class="faculty-controls">
+<label for="faculty-search" class="visually-hidden">Buscar profesor</label>
+<input id="faculty-search" type="text" placeholder="Buscar por nombre, área o correo…" autocomplete="off" />
 
-  <footer id="contacto" class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Universidad Católica del Norte. Portal no oficial de accesos rápidos.</p>
-      <p class="footer-links">
-        <a href="https://www.ucn.cl" target="_blank" rel="noopener noreferrer">Sitio oficial UCN</a>
-        <span aria-hidden="true"> · </span>
-        <a class="github-link" href="https://github.com/mvrioo69/portalucn.github.io" target="_blank" rel="noopener noreferrer" aria-label="Repositorio en GitHub">
-          <!-- Icono oficial de GitHub (marca) -->
-          <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-            <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-          </svg>
-          <span class="visually-hidden">Repositorio en GitHub</span>
-        </a>
-      </p>
-    </div>
-  </footer>
+<div class="faculty-filters" id="faculty-filters" role="group" aria-label="Filtrar por carrera">
+<!-- Los chips de filtro se generan dinámicamente desde profesores.js -->
+</div>
+</div>
 
-  <script src="platforms.js"></script>
-  <script src="script.js"></script>
+<div id="faculty-grid" class="faculty-grid" role="list"></div>
+<p id="faculty-no-results" class="no-results" hidden>No se encontraron profesores con ese criterio.</p>
+
+<p class="faculty-disclaimer">
+Datos obtenidos de <a href="https://eic.ucn.cl/personas" target="_blank" rel="noopener noreferrer">eic.ucn.cl/personas</a>.
+Si detectas un dato desactualizado, avísanos por el correo institucional del portal.
+</p>
+</div>
+</section>
+
+<section id="ayuda" class="help-section">
+<div class="container help-inner">
+<div class="help-card">
+<h3>¿No encuentras tu acceso?</h3>
+<p>Revisa la sección de ayuda de la DTI o contacta a soporte de mesa de ayuda para recuperar tus credenciales institucionales.</p>
+</div>
+<div class="help-card">
+<h3>Consejo de seguridad</h3>
+<p>Nunca ingreses tus credenciales UCN en sitios distintos a los dominios oficiales de la universidad. Verifica siempre la URL antes de iniciar sesión.</p>
+</div>
+<div class="help-card" >
+<h3>¿Tienes sugerencias?</h3>
+<p>Si quieres que agreguemos más plataformas o tienes ideas para mejorar este portal, contáctanos a través del correo institucional de mario.otarola@alumnos.ucn.cl o renato.nunez02@alumnos.ucn.cl
+</div>
+</section>
+</main>
+<footer id="contacto" class="site-footer">
+<div class="container footer-inner">
+<p>&copy; <span id="year"></span> Universidad Católica del Norte. Portal no oficial de accesos rápidos.</p>
+<p class="footer-links">
+<a href="https://www.ucn.cl" target="_blank" rel="noopener noreferrer">Sitio oficial UCN</a>
+<span aria-hidden="true"> · </span>
+<a class="github-link" href="https://github.com/mvrioo69/portalucn.github.io" target="_blank" rel="noopener noreferrer" aria-label="Repositorio en GitHub">
+<!-- Icono oficial de GitHub (marca) -->
+<svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+<path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+</svg>
+<span class="visually-hidden">Repositorio en GitHub</span>
+</a>
+</p>
+</div>
+</footer>
+<script src="platforms.js"></script>
+<script src="script.js"></script>
+<script src="profesores-data.js"></script>
+<script src="profesores.js"></script>
 </body>
 </html>
