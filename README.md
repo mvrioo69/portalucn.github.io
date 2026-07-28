@@ -5,7 +5,7 @@ Este repositorio reúne información y descripciones de los distintos sitios ins
 Contenido
 Listado de páginas oficiales y servicios digitales.
 
-Descripción funcional y propósito de cada sitio.
+Descripción funcional y propósito de cada sitio
 
 Alcance
 Este repositorio es un proyecto independiente con fines informativos y de documentación sobre plataformas públicas de la UCN.
