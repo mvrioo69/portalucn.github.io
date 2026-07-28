@@ -9,3 +9,4 @@ Descripción funcional y propósito de cada sitio.
 
 Alcance
 Este repositorio es un proyecto independiente con fines informativos y de documentación sobre plataformas públicas de la UCN.
+Hecho por: Mario Otarola (ICCI) y Renato Nunez (ITI)
