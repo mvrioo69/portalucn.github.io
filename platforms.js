@@ -46,5 +46,12 @@ const PLATFORMS = [
     url: "https://experience.elluciancloud.com/ucdn/", 
     icon: "📒", 
     desc: "Plataforma recopliatoria de informacion sobre los recursos y servicios de la universidad." 
+   },
+  {
+    name: "Normas Gráficas UCN",
+    url: "https://www.ucn.cl/comunicaciones-ucn/normas-graficas-ucn-70-anos/",
+    icon: "🎨",
+    desc: "Normas gráficas para el uso correcto del branding institucional."
   }
 ];
+
